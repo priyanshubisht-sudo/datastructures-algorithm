@@ -151,7 +151,6 @@ void print11(int n) {
         {
             cout << j;
         }
-        
         for (int j = 1; j <= 2*(n-i); j++)
         {
             cout << " ";
@@ -165,7 +164,44 @@ void print11(int n) {
     }
     
 }
+void print12(int n) {
 
+    int num = 1;
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+        
+    }
+    
+}
+void print13(int n) {
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'A'; ch <= 'A' + i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    
+}
+void print14(int n) {
+    for (int i = n; i > 0; i--)
+    {
+        for (char ch = 'A'; ch < 'A' + i; ch++)
+        {
+            cout << ch << " ";
+        }
+        cout << endl;
+    }
+    
+}
 int main() {
 
     // outer loop -> rows
@@ -178,7 +214,7 @@ int main() {
     {
         int n;
         cin >> n;
-        print11(n);
+        print14(n);
   
     }
     
