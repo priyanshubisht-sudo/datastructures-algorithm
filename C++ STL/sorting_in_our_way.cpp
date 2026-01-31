@@ -17,5 +17,19 @@ int main() {
     for(const auto & it : a){
         cout << it.first << " " << it.second << "\n";
     }
+
+    // int num = 7;
+    // int cnt = __builtin_popcount();
+    
+    // long long num = 1032948093289439;
+    // int cnt = __builtin_popcountll();
+
+    // string s = "123";
+
+    // do{
+    //     cout << s << endl;
+    // } while(next_permutation(s.begin(), s.end()));
+    // int maxi = *max_element(a, a+n);
+    // this will be written as function.
     
 }
