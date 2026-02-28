@@ -1,4 +1,10 @@
 #include <bits/stdc++.h>
+
+// 26. Remove Duplicates from Sorted Array
+/*
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+*/
+
 using namespace std;
 
 // Brute-force Approach
@@ -26,7 +32,7 @@ int removeDuplicate(vector <int> &arr, int n){
             i++;
         }
     }
-    return i+1;
+    return i+1; 
 }
 
 int main() {
