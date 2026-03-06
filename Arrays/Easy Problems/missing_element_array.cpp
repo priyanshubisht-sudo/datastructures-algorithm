@@ -25,6 +25,7 @@ int missingArray(vector<int> &arr, int n){
 */
 
 // Better Approach
+/*
 int missingArray(vector<int> &arr, int n){
     int hash[n+1] = {0};
     for (int i = 0; i < n; i++)
@@ -39,6 +40,20 @@ int missingArray(vector<int> &arr, int n){
     }
 
     return -1;
+}
+*/
+
+int missingArray(vector<int> &arr, int n){
+    int xor1= 0,xor2 = 0;
+    int m = n-1;
+    for (int i = 0; i < m; i++)
+    {
+        xor1 = xor1 ^ (i+1);
+        xor2 = xor2 ^ arr[i];
+    }
+    xor1 = xor1 ^ n;
+    return xor1 ^ xor2;
+
 }
 
 int main() {
