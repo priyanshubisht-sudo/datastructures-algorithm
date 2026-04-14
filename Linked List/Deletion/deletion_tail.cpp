@@ -125,11 +125,40 @@ Node *deleteK(Node *head, int k)
     }
     return head;
 }
+
+Node *deleteEl(Node *head, int el)
+{
+    if (head == NULL)
+    {
+        return head;
+    }
+    if (head->data == el)
+    {
+        Node *temp = head;
+        head = head->next;
+        free(temp);
+        return head;
+    }
+    Node *temp = head;
+    Node *prev = NULL;
+    while (temp != NULL)
+    {
+        if (temp->data == el)
+        {
+            prev->next = prev->next->next;
+            free(temp);
+            break;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    return head;
+}
 int main()
 {
     vector<int> arr = {2, 5, 8, 7};
     Node *head = converArr2LL(arr);
-    head = deleteK(head, 2);
+    head = deleteEl(head, 2);
     print(head);
     return 0;
 }
